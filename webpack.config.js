@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const inProduction = (process.env.NODE_ENV === 'production');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin')
@@ -19,26 +19,23 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: "babel-loader",
-                query: {
-                    presets: ['es2015', 'stage-1', 'react'],
-                }
+                loader: 'babel-loader'
             },
             {
                 test: /\.css$/,
                 use: ExtractTextPlugin.extract({
-                    fallback: "style-loader",
+                    fallback: 'style-loader',
                     use: ['css-loader']
                 })
             },
             {
                 test: /\.s[ac]ss$/,
                 use: ExtractTextPlugin.extract({
-                    fallback: "style-loader",
+                    fallback: 'style-loader',
                     use: ['css-loader',{
                         loader: 'sass-loader',
                         options: {
-                            includePaths: [path.resolve(__dirname, "node_modules")]
+                            includePaths: [path.resolve(__dirname, 'node_modules')]
                         }
                     }]
                 })
@@ -59,7 +56,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new ExtractTextPlugin("css/[name].css"),
+        new ExtractTextPlugin('css/[name].css'),
         new webpack.LoaderOptionsPlugin({
             minimize: inProduction
         }),
@@ -68,7 +65,7 @@ module.exports = {
             host: 'localhost',
             proxy: 'localhost/react-mdcui',
             files: ['./*.html', './public/**/*'],
-            browser: "firefox",
+            browser: 'firefox',
             notify: false
         })
     ]

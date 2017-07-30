@@ -3,3 +3,4 @@ Thumbs.db
 .DS_Store
 index.html
 /dist
+/lib

@@ -27,14 +27,11 @@ const propTypes = {
 };
 
 class Button extends Component{
-    constructor(props){
-        super(props);
-        this.state = {
-            ripple: false
-        };
-    }
+
     render(){
+
         let {dense, raised, compact, primary, accent, className, children, component, href, ripple, ripplePrimary, rippleAccent, ...otherProps} = {...this.props};
+
         let classes = classnames('mdc-button', {
             'mdc-button--accent': accent,
             'mdc-button--compact': compact,
@@ -46,6 +43,7 @@ class Button extends Component{
             'mdc-ripple-surface--accent': rippleAccent
 
         }, className);
+
         return React.createElement(component || (href ? 'a' : 'button'),
             {
                 className: classes,

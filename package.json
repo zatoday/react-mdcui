@@ -1,25 +1,37 @@
 {
   "name": "react-mdcui",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "use material components web with reactjs",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "jsnext:main": "src/index.js",
+  "repository": "zatoday/react-mdcui",
   "scripts": {
     "globals": "npm install -g cross-env",
     "dev": "cross-env NODE_ENV=development node_modules/.bin/webpack --progress --hide-modules",
     "watch": "cross-env NODE_ENV=development node_modules/.bin/webpack --watch --progress --hide-modules",
-    "production": "cross-env NODE_ENV=production node_modules/.bin/webpack --progress --hide-modules"
+    "production": "cross-env NODE_ENV=production node_modules/.bin/webpack --progress --hide-modules",
+    "compile": "babel -d lib/ src/",
+    "prepublish": "npm run compile"
   },
-  "author": "zaknight",
+  "keywords": [
+    "react",
+    "material",
+    "components",
+    "web"
+  ],
+  "author": "ZA <za@zatoday.com> (http://zatoday.com)",
   "license": "MIT",
   "dependencies": {
     "material-components-web": "^0.15.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.1",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
     "browser-sync": "^2.18.13",
     "browser-sync-webpack-plugin": "^1.2.0",
     "classnames": "^2.2.5",
@@ -33,6 +45,6 @@
     "react-dom": "^15.6.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
-    "webpack": "^3.4.0"
+    "webpack": "^3.4.1"
   }
 }
