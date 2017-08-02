@@ -1,6 +1,6 @@
 {
   "name": "react-mdcui",
-  "version": "1.0.5",
+  "version": "0.0.1",
   "description": "use material components web with reactjs",
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",
@@ -11,7 +11,8 @@
     "watch": "cross-env NODE_ENV=development node_modules/.bin/webpack --watch --progress --hide-modules",
     "production": "cross-env NODE_ENV=production node_modules/.bin/webpack --progress --hide-modules",
     "compile": "babel -d lib/ src/",
-    "prepublish": "npm run compile"
+    "prepublish": "npm run compile",
+    "prepatch": "npm run compile"
   },
   "keywords": [
     "react",
@@ -40,6 +41,7 @@
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
     "node-sass": "^4.5.3",
+    "normalize.css": "^7.0.0",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
