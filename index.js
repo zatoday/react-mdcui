@@ -5,7 +5,7 @@ import Grid from './src/Grid/Grid';
 import Cell from './src/Grid/Cell';
 
 Dom.render(
-    <Grid alignRight>
+    <Grid fixedWidth alignRight>
         <Cell col={5} alignBottom>
             <FormField alignEnd>
                 <Button raised dense ripplePrimary>Co ripple nha</Button>

@@ -11,16 +11,16 @@ const propTypes = {
         PropTypes.element,
         PropTypes.node
     ]),
-    fullWidth: PropTypes.bool,
+    fixedWidth: PropTypes.bool,
     alignLeft: PropTypes.bool,
     alignRight: PropTypes.bool
 };
 
 const Grid = (props) => {
-    let { className, fullWidth, children, alignLeft, alignRight, ...otherProps } = props;
+    let { className, fixedWidth, children, alignLeft, alignRight, ...otherProps } = props;
 
     let classes = classnames('mdc-layout-grid', {
-        'mdc-layout-grid--fixed-column-width': fullWidth,
+        'mdc-layout-grid--fixed-column-width': fixedWidth,
         'mdc-layout-grid--align-left': alignLeft,
         'mdc-layout-grid--align-right': alignRight
     },  className);
