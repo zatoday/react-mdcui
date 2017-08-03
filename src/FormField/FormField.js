@@ -6,9 +6,6 @@ import PropTypes from 'prop-types';
 const propTypes = {
     className: PropTypes.string,
     alignEnd: PropTypes.bool,
-    fullwidth: PropTypes.bool,
-    multiline: PropTypes.bool,
-    box: PropTypes.bool,
     children: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.element,
@@ -17,13 +14,10 @@ const propTypes = {
 };
 
 const FormField = (props) => {
-    let { className, alignEnd, fullwidth, multiline, box, children, ...otherProps } = props;
+    let { className, alignEnd, children, ...otherProps } = props;
 
     let classes = classnames('mdc-form-field', {
-        'mdc-form-field--align-end': alignEnd,
-        'mdc-textfield--fullwidth': fullwidth,
-        'mdc-textfield--multiline': multiline,
-        'mdc-textfield--box': box
+        'mdc-form-field--align-end': alignEnd
     }, className);
 
     return (
