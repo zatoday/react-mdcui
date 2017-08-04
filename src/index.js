@@ -1,4 +1,3 @@
-import 'normalize.css/normalize.css';
 export {Button} from './Button';
 export {Grid, Cell} from './Grid';
 export {FormField} from './FormField';
