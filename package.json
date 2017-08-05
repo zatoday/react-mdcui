@@ -18,7 +18,8 @@
     "watch": "cross-env NODE_ENV=development node_modules/.bin/webpack --watch --progress --hide-modules",
     "production": "cross-env NODE_ENV=production node_modules/.bin/webpack --progress --hide-modules",
     "compile": "babel src -d lib --ignore spec.js",
-    "prepublish": "npm run compile"
+    "patch": "npm version patch",
+    "prepublish": "npm run patch && npm run compile"
   },
   "keywords": [
     "react",
