@@ -1,5 +1,11 @@
-import Sum from './Sum';
+import Button from './Button';
+import React from 'react';
+import renderer from 'react-test-renderer';
 
-test('adds 1 + 2 to equal 3', () => {
-    expect(Sum(1, 2)).toBe(3);
+test('Button changes the class when hovered', () => {
+  const component = renderer.create(
+    <Button href="http://www.facebook.com">Facebook</Button>
+  );
+  let tree = component.toJSON();
+  expect(tree).toMatchSnapshot();
 });

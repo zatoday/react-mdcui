@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import classnames from 'classnames';
 import '@material/button/dist/mdc.button.css';
 import PropTypes from 'prop-types';
@@ -26,7 +26,46 @@ const propTypes = {
     href: PropTypes.string
 };
 
-class Button extends Component{
+class Button extends PureComponent{
+
+    constructor(props){
+        super(props);
+        this.state = {
+            dense: false,
+            raised: false,
+            compact: false,
+            primary: false,
+            accent: false,
+            className: null,
+            children: null,
+            component: null,
+            href: null,
+            ripple: false,
+            ripplePrimary: false,
+            rippleAccent: false,
+            otherProps: {}
+        };
+    }
+
+    componentWillMount(){
+        let {dense, raised, compact, primary, accent, className, children, component, href, ripple, ripplePrimary, rippleAccent, ...otherProps} = {...this.props};
+
+        this.setState({
+            dense: dense,
+            raised: raised,
+            compact: compact,
+            primary: primary,
+            accent: accent,
+            className: className,
+            children: children,
+            component: component,
+            href: href,
+            ripple: ripple,
+            ripplePrimary: ripplePrimary,
+            rippleAccent: rippleAccent,
+            otherProps: [...otherProps]
+        });
+    }
 
     render(){
 
