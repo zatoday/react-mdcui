@@ -12,7 +12,7 @@
     }
   },
   "scripts": {
-    "globals": "npm install -g cross-env babel-cli",
+    "globals": "npm install -g cross-env babel-cli babel",
     "test": "jest",
     "dev": "cross-env NODE_ENV=development node_modules/.bin/webpack --progress --hide-modules",
     "watch": "cross-env NODE_ENV=development node_modules/.bin/webpack --watch --progress --hide-modules",
