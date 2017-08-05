@@ -2,4 +2,4 @@ language: node_js
 node_js:
   - "lts/*"
 before_script:
-  - npm run globals
+  - npm install -g babel-cli
