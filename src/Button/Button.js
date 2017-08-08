@@ -1,13 +1,8 @@
 import React, {PureComponent} from 'react';
 import classnames from 'classnames';
-import '@material/button/dist/mdc.button.css';
 import PropTypes from 'prop-types';
-import {MDCRipple} from '../Ripple';
 
 const propTypes = {
-    ripple: PropTypes.bool,
-    ripplePrimary: PropTypes.bool,
-    rippleAccent: PropTypes.bool,
     dense: PropTypes.bool,
     raised: PropTypes.bool,
     compact: PropTypes.bool,
@@ -40,15 +35,12 @@ class Button extends PureComponent{
             children: null,
             component: null,
             href: null,
-            ripple: false,
-            ripplePrimary: false,
-            rippleAccent: false,
             otherProps: {}
         };
     }
 
     componentWillMount(){
-        let {dense, raised, compact, primary, accent, className, children, component, href, ripple, ripplePrimary, rippleAccent, ...otherProps} = {...this.props};
+        let {dense, raised, compact, primary, accent, className, children, component, href, ...otherProps} = {...this.props};
 
         this.setState({
             dense: dense,
@@ -60,27 +52,20 @@ class Button extends PureComponent{
             children: children,
             component: component,
             href: href,
-            ripple: ripple,
-            ripplePrimary: ripplePrimary,
-            rippleAccent: rippleAccent,
             otherProps: [...otherProps]
         });
     }
 
     render(){
 
-        let {dense, raised, compact, primary, accent, className, children, component, href, ripple, ripplePrimary, rippleAccent, ...otherProps} = {...this.props};
+        let {dense, raised, compact, primary, accent, className, children, component, href, ...otherProps} = {...this.props};
 
         let classes = classnames('mdc-button', {
             'mdc-button--accent': accent,
             'mdc-button--compact': compact,
             'mdc-button--dense': dense,
             'mdc-button--primary': primary,
-            'mdc-button--raised': raised,
-            'mdc-ripple-surface': ripple || ripplePrimary || rippleAccent,
-            'mdc-ripple-surface--primary': ripplePrimary,
-            'mdc-ripple-surface--accent': rippleAccent
-
+            'mdc-button--raised': raised
         }, className);
 
         return React.createElement(component || (href ? 'a' : 'button'),
@@ -91,12 +76,6 @@ class Button extends PureComponent{
                 ref: (button) => { this.ElementButton = button; }
             }, children
         );
-    }
-
-    componentDidMount(){
-        if(this.props.ripple || this.props.ripplePrimary || this.props.rippleAccent){
-            MDCRipple.attachTo(this.ElementButton);
-        }
     }
 }
 

@@ -51,5 +51,12 @@
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "webpack": "^3.4.1"
+  },
+  "dependencies": {
+    "@material/button": "^0.3.11",
+    "@material/elevation": "^0.1.11",
+    "@material/layout-grid": "^0.4.1",
+    "@material/ripple": "^0.8.2",
+    "@material/textfield": "^0.3.3"
   }
 }

@@ -1,1 +1,2 @@
-export {MDCRipple, MDCRippleFoundation, util} from './Ripple';
+import '@material/ripple/dist/mdc.ripple.css';
+export {default as Ripple} from './Ripple';
