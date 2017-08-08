@@ -29,9 +29,6 @@
   ],
   "author": "ZA <za@zatoday.com> (http://zatoday.com)",
   "license": "MIT",
-  "dependencies": {
-    "material-components-web": "^0.15.0"
-  },
   "devDependencies": {
     "babel-core": "^6.25.0",
     "babel-jest": "^20.0.3",
@@ -51,7 +48,6 @@
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-test-renderer": "^15.6.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "webpack": "^3.4.1"
