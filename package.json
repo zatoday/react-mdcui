@@ -57,6 +57,7 @@
     "@material/elevation": "^0.1.11",
     "@material/layout-grid": "^0.4.1",
     "@material/ripple": "^0.8.2",
-    "@material/textfield": "^0.3.3"
+    "@material/textfield": "^0.3.3",
+    "@material/theme": "^0.1.7"
   }
 }

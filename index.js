@@ -5,6 +5,7 @@ import {TextField} from './src/TextField';
 import {Ripple} from './src/Ripple';
 import {Elevation} from './src/Elevation';
 import {Button} from './src/Button';
+import {Theme} from './src/Theme';
 
 Dom.render(
     <Grid fixedWidth alignRight>
@@ -17,6 +18,9 @@ Dom.render(
                 <Button>ZA</Button>
             </Ripple>
         </Elevation>
+        <Theme primary-on-dark>
+            <Button className="mdc-theme--primary-bg mdc-theme--accent">ZA</Button>
+        </Theme>
     </Grid>,
     document.querySelector('#root')
 );
