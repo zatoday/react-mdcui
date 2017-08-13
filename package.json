@@ -1,6 +1,6 @@
 {
   "name": "react-mdcui",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "use material components web with reactjs",
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",
