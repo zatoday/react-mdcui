@@ -18,7 +18,6 @@
     "watch": "cross-env NODE_ENV=development node_modules/.bin/webpack --watch --progress --hide-modules",
     "production": "cross-env NODE_ENV=production node_modules/.bin/webpack --progress --hide-modules",
     "compile": "babel src -d lib --ignore spec.js",
-    "patch": "npm version patch",
     "prepublish": "npm run patch && npm run compile"
   },
   "keywords": [
@@ -38,27 +37,28 @@
     "babel-preset-stage-1": "^6.24.1",
     "browser-sync": "^2.18.13",
     "browser-sync-webpack-plugin": "^1.2.0",
-    "classnames": "^2.2.5",
     "clean-webpack-plugin": "^0.1.16",
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
     "jest": "^20.0.4",
     "node-sass": "^4.5.3",
-    "prop-types": "^15.5.10",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
-    "webpack": "^3.4.1"
+    "webpack": "^3.5.1"
   },
   "dependencies": {
     "@material/button": "^0.3.11",
     "@material/elevation": "^0.1.11",
     "@material/form-field": "^0.2.11",
     "@material/layout-grid": "^0.4.1",
+    "@material/radio": "^0.2.9",
     "@material/ripple": "^0.8.2",
     "@material/textfield": "^0.3.3",
-    "@material/theme": "^0.1.7"
+    "@material/theme": "^0.1.7",
+    "classnames": "^2.2.5",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
   }
 }

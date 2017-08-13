@@ -1,1 +1,10 @@
 src/
+node_modules/
+.gitignore
+.travis.yml
+.yarnclean
+assetsTransformer.js
+index.html
+index.js
+webpack.config.js
+yarn.lock
