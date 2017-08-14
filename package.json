@@ -1,6 +1,6 @@
 {
   "name": "react-mdcui",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "use material components web with reactjs",
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",
@@ -12,13 +12,13 @@
     }
   },
   "scripts": {
-    "globals": "npm install -g cross-env babel-cli babel",
-    "test": "jest",
+    "globals": "yarn global add cross-env && brew install babel",
+    "test": "jest -u",
     "dev": "cross-env NODE_ENV=development node_modules/.bin/webpack --progress --hide-modules",
     "watch": "cross-env NODE_ENV=development node_modules/.bin/webpack --watch --progress --hide-modules",
     "production": "cross-env NODE_ENV=production node_modules/.bin/webpack --progress --hide-modules",
     "compile": "babel src -d lib --ignore spec.js",
-    "prepublish": "npm version patch && npm run compile"
+    "prepublish": "yarn run compile"
   },
   "keywords": [
     "react",
@@ -41,6 +41,7 @@
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.30.1",
     "jest": "^20.0.4",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
