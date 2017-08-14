@@ -1,10 +1,12 @@
 src/
 node_modules/
+example/
+public/
 .gitignore
 .travis.yml
 .yarnclean
-assetsTransformer.js
-index.html
-index.js
-webpack.config.js
 yarn.lock
+Thumbs.db
+.DS_Store
+assetsTransformer.js
+webpack.config.js

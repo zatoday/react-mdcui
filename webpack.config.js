@@ -3,15 +3,16 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const inProduction = (process.env.NODE_ENV === 'production');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     target: 'web',
     entry: {
-        app: ['./index.js']
+        app: ['./example/index.js']
     },
     output: {
-        path: path.resolve(__dirname, './dist'),
+        path: path.resolve(__dirname, './public'),
         filename: 'js/[name].js'
     },
     module: {
@@ -60,11 +61,18 @@ module.exports = {
         new webpack.LoaderOptionsPlugin({
             minimize: inProduction
         }),
-        new CleanWebpackPlugin(['dist']),
+        new CleanWebpackPlugin(['public']),
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: './example/template.ejs',
+            assets: {
+                style: 'css/app.css'
+            }
+        }),
         new BrowserSyncPlugin({
             host: 'localhost',
-            proxy: 'localhost/react-mdcui',
-            files: ['./*.html', './public/**/*'],
+            proxy: 'localhost/react-mdcui/public',
+            files: ['./public/*'],
             browser: 'firefox',
             notify: false
         })

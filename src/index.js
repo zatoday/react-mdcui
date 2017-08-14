@@ -4,4 +4,3 @@ export {FormField} from './FormField';
 export {Grid, Cell} from './Grid';
 export {Ripple} from './Ripple';
 export {TextField} from './TextField';
-export {Theme} from './Theme';

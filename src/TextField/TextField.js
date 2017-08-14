@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import classnames from 'classnames';
-import '@material/textfield/dist/mdc.textfield.css';
 import PropTypes from 'prop-types';
 import {MDCTextfield} from '@material/textfield/dist/mdc.textfield';
 

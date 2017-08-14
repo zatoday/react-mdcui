@@ -1,7 +1,9 @@
 /node_modules
+/example
+/public
+/lib
 Thumbs.db
 .DS_Store
-/dist
-/lib
 .yarnclean
 yarn.lock
+.npmignore
